@@ -1,12 +1,11 @@
 import { QBCore } from './qbcore'
-import { Game, Entity } from 'fivem-js'
+import { Game } from 'fivem-js'
 
 onNet("mojito_platechanger:client:openmenu", () => {
   const Ply = Game.PlayerPed
   const [Veh, Dist] = QBCore.Functions.GetClosestVehicle(Ply.Position)
 
   if (Veh) {
-    console.log(Dist)
     if (Dist <= 5.0) {
       emit("nh-context:sendMenu", [
         {
@@ -65,7 +64,6 @@ const TakeInput = async (): Promise<string> => {
 
 on("mojito_licenseplate:client:update", async () => {
   CURRENT_PLATE = await TakeInput()
-  console.log(CURRENT_PLATE)
 })
 
 on("mojito_licenseplate:client:apply", () => {
