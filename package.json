@@ -1,0 +1,25 @@
+{
+  "name": "mojito_platechanger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mojito",
+  "scripts": {
+    "build": "webpack --mode development --color --progress",
+    "watch": "webpack --mode development --watch"
+  },
+  "dependencies": {
+    "@citizenfx/client": "^2.0.4355-1",
+    "@citizenfx/server": "^2.0.4355-1",
+    "@types/node": "^16.3.1",
+    "fivem-js": "^1.5.2",
+    "qbcore.js": "^1.1.6"
+  },
+  "devDependencies": {
+    "remove-files-webpack-plugin": "^1.4.4",
+    "terser-webpack-plugin": "^5.2.4",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
