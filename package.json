@@ -11,8 +11,7 @@
     "@citizenfx/client": "^2.0.4355-1",
     "@citizenfx/server": "^2.0.4355-1",
     "@types/node": "^16.3.1",
-    "fivem-js": "^1.5.2",
-    "qbcore.js": "^1.1.6"
+    "qbcore.js": "^1.2.2"
   },
   "devDependencies": {
     "remove-files-webpack-plugin": "^1.4.4",

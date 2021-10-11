@@ -1,9 +1,7 @@
 import { QBCore } from './qbcore'
-import { Game } from 'fivem-js'
 
 onNet("mojito_platechanger:client:openmenu", () => {
-  const Ply = Game.PlayerPed
-  const [Veh, Dist] = QBCore.Functions.GetClosestVehicle(Ply.Position)
+  const [Veh, Dist] = QBCore.Functions.GetClosestVehicle()
 
   if (Veh) {
     if (Dist <= 5.0) {
@@ -67,8 +65,7 @@ on("mojito_licenseplate:client:update", async () => {
 })
 
 on("mojito_licenseplate:client:apply", () => {
-  const Ply = Game.PlayerPed
-  const [Veh, Dist] = QBCore.Functions.GetClosestVehicle(Ply.Position)
+  const [Veh, Dist] = QBCore.Functions.GetClosestVehicle()
 
   if (Veh) {
     if (Dist >= 5.0) return QBCore.Functions.Notify("This vehicle is too far away", "inform", 5000) 
